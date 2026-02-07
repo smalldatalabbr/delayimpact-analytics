@@ -2,6 +2,15 @@
 
 **Diagnóstico de atraso logístico e impacto na satisfação do cliente**
 
+![Author](https://img.shields.io/badge/author-Jhonathan%20Domingues-lightgrey)
+![Status](https://img.shields.io/badge/status-POC%20conclu%C3%ADda-success)
+![License](https://img.shields.io/badge/license-MIT-blue)
+
+![Python](https://img.shields.io/badge/python-3.12-blue?logo=python&logoColor=white)
+![Data Engine](https://img.shields.io/badge/data%20engine-DuckDB-black?logo=duckdb&logoColor=white)
+![Query](https://img.shields.io/badge/query-SQL-blue?logo=postgresql&logoColor=white)
+![EDA](https://img.shields.io/badge/eda-diagnostic-informational)
+
 ![DelayImpact - Analytics](imagens/thumbnail.png)
 
 ---
@@ -177,7 +186,7 @@ A camada Gold consolida informações em **nível de pedido**, servindo como bas
 
 ## Status
 
-POC concluída — dados curados, camada Gold analítica construída, análise exploratória guiada finalizada e relatório executivo disponível.
+POC concluída - Dados curados, camada Gold analítica construída, análise exploratória guiada finalizada e relatório executivo disponível.
 
 ---
 
@@ -197,8 +206,8 @@ Esta POC**não foi desenvolvida para uso em produção.**
 
 ---
 
-## Contato
+## Onde me encontrar
 
-**Jhonathan Domingues**
-
-🌐 [Portifólio](https://jhonathan.me) | 💼 [Linkedin](https://www.linkedin.com/in/jhonathandomingues)
+[![Website](https://img.shields.io/badge/🌐%20Website-Portfólio-black)](https://jhonathan.me)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Perfil-blue?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jhonathandomingues)
+[![Email](https://img.shields.io/badge/Email-Contato-success?logo=minutemailer&logoColor=white)](mailto:hello@jhonathan.me)
