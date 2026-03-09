@@ -1,213 +1,247 @@
 # DelayImpact Analytics
 
-**Diagnóstico de atraso logístico e impacto na satisfação do cliente**
+**Diagnóstico analítico do impacto de atrasos logísticos na satisfação do cliente em operações de e-commerce.**
 
 ![Author](https://img.shields.io/badge/author-Jhonathan%20Domingues-lightgrey)
 ![Status](https://img.shields.io/badge/status-POC%20conclu%C3%ADda-success)
 ![License](https://img.shields.io/badge/license-MIT-blue)
 
-![Python](https://img.shields.io/badge/python-3.12-blue?logo=python&logoColor=white)
-![Data Engine](https://img.shields.io/badge/data%20engine-DuckDB-black?logo=duckdb&logoColor=white)
-![Query](https://img.shields.io/badge/query-SQL-blue?logo=postgresql&logoColor=white)
+![Python](https://img.shields.io/badge/python-3.10.12-blue?logo=python\&logoColor=white)
+![DuckDB](https://img.shields.io/badge/data%20engine-DuckDB-black?logo=duckdb\&logoColor=white)
+![SQL](https://img.shields.io/badge/query-SQL-blue?logo=postgresql\&logoColor=white)
 ![EDA](https://img.shields.io/badge/eda-diagnostic-informational)
 
-![DelayImpact - Analytics](imagens/thumbnail.png)
+![DelayImpact](imagens/delayimpact-results.png)
 
 ---
 
-## Visão Geral
+# Visão Geral
 
-Esta Proof of Concept (POC) tem como objetivo investigar, de forma analítica e orientada a negócio, **como atrasos logísticos impactam a satisfação do cliente em operações de e-commerce**.
+A **DelayImpact Analytics** é uma **Proof of Concept (POC)** que investiga como **atrasos logísticos impactam a satisfação do cliente em operações de e-commerce**.
 
-A POC parte de dados operacionais, logísticos, financeiros e de experiência do cliente para construir uma base analítica confiável e realizar uma **análise diagnóstica**, focada em identificar padrões, pontos de inflexão e segmentos mais sensíveis ao atraso.
+A análise parte de dados operacionais, logísticos, financeiros e de experiência do cliente para construir uma **base analítica confiável** e conduzir um diagnóstico orientado a negócio.
 
-O foco não é previsão ou modelagem preditiva, mas **entendimento do problema e apoio à decisão**, respondendo à pergunta:
+O objetivo da POC não é realizar modelagem preditiva, mas compreender o problema e responder à pergunta:
 
-> *“Em que situações o atraso logístico passa a afetar significativamente a satisfação do cliente e onde agir primeiro?”*
-
----
-
-## Problema de Negócio
-
-A experiência de entrega é um dos principais determinantes da satisfação do cliente em e-commerce.  
-Atrasos, mesmo de pequena duração, podem gerar frustração, avaliações negativas e impacto na percepção da marca.
-
-No entanto, nem todo atraso tem o mesmo efeito.
-
-Esta POC busca entender:
-
-* como a satisfação varia conforme a intensidade do atraso
-* se existem pontos críticos a partir dos quais a experiência se deteriora
-* se o impacto do atraso é homogêneo ou varia por categoria e região
-* onde esforços de melhoria logística tendem a gerar maior retorno
+> *Em que situações o atraso logístico passa a afetar significativamente a satisfação do cliente e onde esforços de melhoria devem ser priorizados?*
 
 ---
 
-## Abordagem Analítica
+# Problema de Negócio
 
-A POC segue uma abordagem em camadas, simulando um pipeline analítico realista e reprodutível:
+A experiência de entrega é um dos fatores mais relevantes para a satisfação do cliente em e-commerce.
 
-1. **Curadoria de Dados (Silver)**  
-   Padronização, validação e criação de views intermediárias a partir do dataset original, garantindo consistência e confiabilidade.
+Mesmo atrasos relativamente pequenos podem gerar:
 
-2. **Camada Gold Analítica**  
-   Consolidação de dados logísticos, financeiros e de satisfação em nível de pedido, com métricas e *features* analíticas voltadas para diagnóstico.
+* avaliações negativas
+* aumento de detratores
+* deterioração da percepção da marca
+* impacto indireto em retenção e recompra
 
-3. **Análise Exploratória Guiada (EDA)**  
-   Análise estruturada e orientada por hipóteses, com foco em relações entre atraso, satisfação e comportamento do cliente.
+No entanto, **nem todo atraso produz o mesmo efeito**.
 
-4. **Síntese Analítica**  
-   Organização dos principais achados em insights claros, voltados ao suporte à tomada de decisão.
+A DelayImpact busca identificar:
+
+* em que intensidade de atraso a satisfação começa a deteriorar
+* quais segmentos são mais sensíveis ao atraso
+* se existem diferenças regionais no impacto da entrega
+* onde melhorias logísticas tendem a gerar maior retorno operacional
 
 ---
 
-## Relatório Executivo
+# Abordagem da Solução
 
-Os principais achados desta POC foram consolidados em um **relatório executivo**, com foco em leitura gerencial e suporte à decisão.
+A POC segue uma abordagem analítica em camadas, simulando a estrutura de um pipeline analítico realista.
 
-[📄 **Acesse o relatório completo**](reports/executive_report.md)
+### Curadoria de Dados (Silver)
+
+* padronização e validação dos dados
+* criação de views intermediárias
+* consolidação de dados operacionais e de pedidos
+
+---
+
+### Camada Gold Analítica
+
+* consolidação das informações em nível de pedido
+* integração de dados logísticos, financeiros e de satisfação
+* criação de métricas e features analíticas
+
+Essa camada funciona como **base única para diagnóstico analítico**.
+
+---
+
+### Análise Exploratória Guiada
+
+A análise exploratória é conduzida com foco em hipóteses de negócio, investigando relações entre:
+
+* atraso logístico
+* satisfação do cliente
+* categoria de produto
+* região de entrega
+
+---
+
+### Síntese Analítica
+
+Os principais achados são consolidados em insights claros voltados ao suporte à decisão operacional.
+
+---
+
+# Relatório Executivo
+
+Os resultados da análise foram consolidados em um **relatório executivo orientado a decisão**.
+
+[📄 **Relatório completo**](reports/executive_summary.md)
 
 O relatório apresenta:
-- os impactos do atraso na satisfação do cliente
-- o risco associado ao aumento de detratores
-- diferenças regionais de sensibilidade ao atraso
-- recomendações analíticas para priorização logística
+
+* impacto do atraso na satisfação do cliente
+* risco associado ao aumento de detratores
+* diferenças regionais de sensibilidade ao atraso
+* recomendações analíticas para priorização logística
 
 ---
 
-## Dataset
+# Dataset
 
-* **Fonte:** Olist E-commerce Dataset (Kaggle)
-* **Contexto:** Marketplace brasileiro de e-commerce
-* **Período:** 2016–2018
+**Fonte:** Olist E-commerce Dataset (Kaggle)
+**Contexto:** marketplace brasileiro de e-commerce
+**Período:** 2016–2018
 
-O dataset é utilizado exclusivamente como **meio demonstrativo**, sendo adaptado para uma arquitetura analítica em camadas utilizando DuckDB.
+Os dados são utilizados exclusivamente como **meio demonstrativo**.
 
----
-
-### Ingestão de Dados
-
-A ingestão e conversão dos dados brutos (CSV) para DuckDB foi realizada por meio de um script dedicado, mantido no repositório como **referência técnica e evidência de reprodutibilidade**.
-
-O banco DuckDB versionado é considerado a **fonte oficial de dados** para esta POC.
+O dataset foi adaptado para uma arquitetura analítica em camadas utilizando **DuckDB**.
 
 ---
 
-## Estrutura do Projeto
+# Pipeline Analítico
 
-```text
+O fluxo de dados da POC segue três etapas principais.
+
+### Ingestão
+
+* conversão dos dados brutos (CSV) para **DuckDB**
+* criação de um banco versionado utilizado como fonte oficial
+
+---
+
+### Curadoria
+
+* transformação dos dados via SQL
+* criação de views analíticas intermediárias
+
+---
+
+### Camada Gold
+
+* consolidação dos dados em **nível de pedido**
+* criação de métricas analíticas
+* preparação para análise exploratória
+
+---
+
+# Estrutura do Projeto
+
+```id="v0n8n3"
 delayimpact-analytics/
-│
+
 ├── data/
 │   ├── raw/
 │   │   └── olist.zip
 │   └── processed/
 │       └── olist.duckdb
-├── imagens/
+│
+├── imangens/
+│   ├── delayimpact-results.png
 │   ├── detractors_by_state.png
 │   ├── detractors_vs_delay_bucket.png
-│   ├── score_vs_delay_bucket.png
-│   └── thumbnail.png
+│   └── score_vs_delay_bucket.png
+│ 
 ├── notebooks/
 │   ├── 01_curadoria_sql.ipynb
 │   ├── 02_gold_delay_satisfaction.ipynb
 │   └── 03_eda_delay_satisfaction.ipynb
-├── reports/
-│   └── executive_summary.md
+│
 ├── scripts/
 │   └── ingest_olist_to_duckdb.py
+│
 ├── src/
 │   └── paths.py
+│
+├── reports/
+│   └── executive_summary.md
+│
 ├── requirements.txt
 └── README.md
 ```
----
-
-## Como executar
-
-### Ambiente virtual
-
-```
-bash
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-```
----
-
-## Camada Gold — `gold_delay_satisfaction`
-
-A camada Gold consolida informações em **nível de pedido**, servindo como base única para a análise exploratória.
-
-### Conteúdo principal
-
-* métricas logísticas (tempo de entrega, atraso, status)
-* métricas financeiras (GMV, frete, pagamentos)
-* dados do cliente (UF, cidade)
-* categoria principal do pedido
-* avaliações do cliente (nota, presença de comentário)
-
-### *Features* analíticas derivadas
-
-* buckets de atraso
-* flags de atraso
-* grupos de satisfação (NPS simplificado)
-* indicadores auxiliares para análise estatística
-
-### Características
-
-* foco analítico
-* estrutura pensada para consumo em pandas
-* sem lógica interpretativa embutida
-* base única para EDA e diagnóstico
 
 ---
 
-## Tecnologias Utilizadas
+# Tecnologias Utilizadas
 
 * Python
 * SQL
 * DuckDB
+* Pandas
 * Análise Exploratória de Dados (EDA)
 * Análise Estatística
 * Visualização de Dados
 
 ---
 
-## Decisões de Design
+# Resultados
 
-* grão único: 1 linha por pedido
-* curadoria centralizada em SQL
-* separação explícita entre organização dos dados e análise
-* foco em diagnóstico, não em dashboards
-* comunicação orientada a decisão, não a exploração livre
+A DelayImpact demonstra como dados operacionais podem ser estruturados para apoiar decisões logísticas orientadas à experiência do cliente.
 
----
+A POC entrega:
 
-## Status
-
-POC concluída - Dados curados, camada Gold analítica construída, análise exploratória guiada finalizada e relatório executivo disponível.
+* base analítica consolidada em nível de pedido
+* diagnóstico do impacto de atrasos na satisfação
+* identificação de segmentos mais sensíveis ao atraso
+* evidências analíticas para priorização logística
+* relatório executivo voltado à tomada de decisão
 
 ---
 
-## Licença
+# Status
 
-Este projeto está licenciado sob os termos da **MIT License**.  
-Consulte o arquivo `LICENSE` para mais detalhes.
+**POC concluída**
+
+* dados curados
+* camada Gold analítica construída
+* análise exploratória guiada finalizada
+* relatório executivo disponível
 
 ---
-## Disclaimer
 
-Este projeto é uma **Proof of Concept (POC)** desenvolvida com o objetivo de **demonstrar capacidade técnica e visão analítica aplicada a problemas reais de negócio**, utilizando ferramentas, métodos e práticas comuns em ambientes profissionais de dados.
+# Disclaimer
 
-As análises, visualizações, conclusões e recomendações apresentadas têm caráter **demonstrativo** e **não devem ser interpretadas como direcionamento operacional real**, nem como base direta para tomada de decisão em ambiente produtivo.
+Esta POC foi desenvolvida exclusivamente para fins demonstrativos.
 
-Esta POC**não foi desenvolvida para uso em produção.**
+As análises e recomendações apresentadas têm caráter ilustrativo e não devem ser utilizadas diretamente como base para decisões operacionais em ambiente produtivo.
+
+---
+
+# Explore outros projetos do Small Data Lab
+
+Este projeto faz parte do **Small Data Lab**, um laboratório técnico dedicado à experimentação aplicada em dados, analytics e sistemas de IA.
+
+Explore também outras POCs do laboratório:
+
+- [LakeFlow](https://github.com/smalldatalabbr/lakeflow) — Pipeline Lakehouse para ingestão e organização de dados externos.  
+- [RetailLens BI](https://github.com/smalldatalabbr/retaillens-bi) — Camada analítica BI-ready para diagnóstico operacional em e-commerce.    
+- [CampaignSense](https://github.com/smalldatalabbr/campaignsense) — CRM Analytics para priorização de campanhas baseada em propensão e ROI.  
+- [FraudWatch](https://github.com/smalldatalabbr/fraudwatch) — Sistema de decisão antifraude que transforma scores de ML em políticas operacionais auditáveis.  
+- [DocLens](https://github.com/smalldatalabbr/doclens) — Chatbot RAG com guardrails e testes adversariais para governança de LLMs.
+
 
 ---
 
 ## Onde me encontrar
 
-[![Website](https://img.shields.io/badge/🌐%20Website-Portfólio-black)](https://jhonathan.me)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Perfil-blue?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jhonathandomingues)
-[![Email](https://img.shields.io/badge/Email-Contato-success?logo=minutemailer&logoColor=white)](mailto:hello@jhonathan.me)
+[Portfólio](https://jhonathan.me) | [LinkedIn](https://www.linkedin.com/in/jhonathandomingues) | [Email](mailto:hello@jhonathan.me)
+
+---
+
+Este repositório é licenciado sob a MIT License.
